@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evertruth</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+</head>
+
+<body>
+    <!-- Locomotive Scroll Container -->
+    <div data-scroll-container>
+
+
+        <header class="header">
+            <div class="logo">
+                <img src="oie_7bcwMCxEkABK.jpg" alt="EverTruth Logo">
+            </div>
+            <div class="company-name">EverTruth</div>
+            <div class="menu">
+                <button id="menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+        
+        <!-- Overlay Menu -->
+        <div id="overlay-menu" class="overlay">
+            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+            <div class="overlay-content inconsolata-custom">
+                <a href="index.html">HOME</a>
+                <a href="nuts.html">SEEDS</a>
+                <a href="seeds.html">BERRIES</a>
+                <a href="dry-fruits.html">DRY FRUITS</a>
+                <a href="https://wa.me/+917455830605" target="_blank">CONTACT US</a>
+            </div>
+        </div>
+
+
+
+
+        <script>
+            // Open the overlay menu
+            document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('overlay-menu').style.width = '100%';
+    document.body.classList.add('no-scroll'); // Disable scrolling
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('overlay-menu').style.width = '0%';
+    document.body.classList.remove('no-scroll'); // Enable scrolling
+});
+        </script>
+        
+        
+        
+        
+
+
+
+        <section id="banner-section"
+            style="padding: 0; text-align: center; background-color: #f5f5f5; position: relative; overflow: hidden;">
+            <div style="position: relative; width: 100%; margin: 0 auto;">
+                <img src="Designer (2).jpeg" alt="EverTruth Banner"
+                    style="background-color:#fdf3e1;   width: 100%; height: auto; max-height: 80vh; object-fit: contain;">
+            </div>
+        </section>
+
+        <!-- Inline CSS Media Queries -->
+        <style>
+            @media screen and (max-width: 768px) {
+                #banner-section img {
+                    max-height: 50vh;
+                    /* Reduced max height for tablets */
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                #banner-section img {
+                    max-height: 40vh;
+                    /* Further reduced max height for mobile */
+                }
+            }
+        </style>
+
+
+        <section class="values-section" data-scroll-section>
+            <div class="container">
+                <h2 style="font-size: 36px; color: #4E3B2F; letter-spacing: 2px; margin-bottom: 20px;">Our Values</h2>
+                <p
+                    style="font-size: 18px; color: #555; background: linear-gradient(120deg, #fff8e1, #e0f7fa); padding: 20px; border-radius: 15px; line-height: 1.7; letter-spacing: 1px;">
+                    <i class="fa-solid fa-quote-left"></i> At <span
+                        style="color: #4CAF50; font-weight: bold;">EverTruth</span>, our commitment to
+                    <strong>authenticity</strong> drives every aspect of our operations. We source only the finest
+                    seeds, nuts, and dry fruits, ensuring that our products are as genuine as they are nutritious. Our
+                    dedication to <strong>loyalty</strong> is reflected in the long-lasting relationships we build with
+                    our B2B partners, offering consistent quality and reliability.<i
+                        class="fa-sharp fa-solid fa-quote-right"></i>
+                </p>
+            </div>
+        </section>
+
+
+
+
+        <!-- Add FontAwesome script for icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script>
+            document.querySelectorAll('.vision-point').forEach(function (el) {
+                el.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+                });
+                el.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        </script>
+
+        <!--our vision ends here-->
+
+        <!--categories-->
+        <section id="categories" style="padding: 5px 18px; background-color: #ffebcc; text-align: center;"
+            data-scroll-section>
+            <h2 style="font-size: 2.5em; margin-bottom: 30px; color: #333; font-family: 'Montserrat', sans-serif;">Our
+                Categories</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 75px;">
+                <!-- Category 1 -->
+                <div
+                    style="width: 280px; background-color: #FFEBEE; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <a href="seeds.html" style="display: block; text-decoration: none; color: inherit;">
+                        <img src="berries ai.jpeg" alt="Berries"
+                            style="width: 100%; height: 180px; object-fit: cover; border-bottom: 2px solid #FF6F61;">
+                        <div style="padding: 15px; background-color: #4E3B2F; color: #fff; text-align: center;">
+                            <h3 style="margin: 0; font-size: 1.4em;">BERRIES</h3>
+                            <p style="margin: 10px 0 0;">Explore our wide range of
+                                high-quality berries.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Category 2 -->
+                <div
+                    style="width: 280px; background-color: #E8F5E9; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <a href="nuts.html" style="display: block; text-decoration: none; color: inherit;">
+                        <img src="seeds ai.jpeg" alt="Seeds"
+                            style="width: 100%; height: 180px; object-fit: cover; border-bottom: 2px solid #4CAF50;">
+                        <div style="padding: 15px; background-color: #4E3B2F; color: #fff; text-align: center;">
+                            <h3 style="margin: 0; font-size: 1.4em;">SEEDS</h3>
+                            <p style="margin: 10px 0 0;">Discover our premium selection of
+                                seeds.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Category 3 -->
+                <div
+                    style="width: 280px; background-color: #FFF3E0; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <a href="dry-fruits.html" style="display: block; text-decoration: none; color: inherit;">
+                        <img src="Designer (4).jpeg" alt="Dry Fruits"
+                            style="width: 100%; height: 180px; object-fit: cover; border-bottom: 2px solid #FF9800;">
+                        <div style="padding: 15px; background-color: #4E3B2F; color: #fff; text-align: center;">
+                            <h3 style="margin: 0; font-size: 1.4em;">DRY-FRUITS</h3>
+                            <p style="margin: 10px 0 0;">Enjoy our fresh and nutritious dry
+                                fruits.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--category ends here-->
+
+
+        
+        <section class="commitment-section" data-scroll-section>
+            <div class="container">
+                <h2 style="font-size: 36px;text-align: center; color: #4E3B2F; letter-spacing: 2px; margin-bottom: 20px;">Our Commitment</h2>
+                <p
+                    style="font-size: 18px; text-align: center;  color: #555; background: #ffebcc; padding: 20px; border-radius: 15px; line-height: 1.7; letter-spacing: 1px;">
+                    <i class="fa-solid fa-quote-left"></i> At <span style="color: #4CAF50; font-weight: bold;">EverTruth</span>, our mission is to offer <strong>authentic</strong> and <strong>premium</strong> products globally. From sourcing the finest ingredients to ensuring sustainability, we deliver products that align with our core values. With a strong focus on <strong>quality</strong> and <strong>trust</strong>, we aim to foster long-term partnerships with businesses worldwide.<i class="fa-sharp fa-solid fa-quote-right"></i>
+                </p>
+            </div>
+        </section>
+        
+        
+        <section class="download-section" data-scroll-section>
+            <div class="container">
+                <h2 style="font-size: 36px; color: #4E3B2F; letter-spacing: 2px; margin-bottom: 20px;">Download <i class="fa-solid fa-file-arrow-down"></i></h2>
+                <p style="font-size: 18px; color: black; margin-bottom: 30px;">
+                    Explore our catalog and learn more about EverTruth through the following downloads:
+                </p>
+            </p>
+            <div class="download-buttons">
+                <a href="Product catalogue _ Rate _ Quality Specs (1).xlsx.pdf" download class="btn-download product-catalog">Download Product Catalogue <i class="fa-solid fa-download"></i></a>
+                <a href="EverTruth.pdf" download class="btn-download company-description">Download EverTruth Description <i class="fa-solid fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--What is evertruth starts here-->
+        <style>
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-200%);
+                    /* Adjust based on the total content width */
+                }
+            }
+
+            .updated {
+                display: flex;
+                width: 100%;
+
+                animation: scroll 20s linear infinite;
+            }
+
+            @media (max-width: 768px) {
+                .updated {
+                    width: 500%;
+                    animation: scroll 18s linear infinite;
+
+                }
+            }
+        </style>
+        <!-- yeh section change krlena....aur ek div h jiski id  ="updated" h....usme id="updated"
+      lena -->
+        <section style="background: linear-gradient(120deg, #f9f9f9, #e0f7fa); padding: 60px 20px; text-align: center;"
+            data-scroll-section>
+            <h2
+                style="font-size: 36px; color: #4E3B2F; margin-bottom: 40px; font-family: 'Montserrat', sans-serif; font-weight: 700; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);">
+                What is EverTruth?</h2>
+            <div style="position: relative; overflow: hidden;">
+                <div class="updated">
+                    <!-- About Item 1 -->
+                    <div
+                        style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; margin-right: 20px;">
+                        <div
+                            style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-right: 20px; text-align: center; position: relative; overflow: hidden;">
+                            <div
+                                style="width: 80px; height: 80px; background: #ffb74d; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <img src="nuts.png" alt="Pumpkin Seeds Icon" style="width: 50px; height: 50px;">
+                            </div>
+                            <h3
+                                style="font-size: 20px; color: #4E3B2F; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                                Bulk Ordering
+                            </h3>
+                            <p 
+                                style="font-size: 14px; color: #555; line-height: 1.5; padding: 0 10px;">
+                                We specialize in large-scale orders, providing a wide variety of seeds, dry fruits,
+                                berries, and nuts.
+                            </p>
+                            <div
+                                style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 6px; background: #ffb74d; border-radius: 10px;">
+                            </div>
+                            <div
+                                style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: #ffb74d; border-radius: 50%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- About Item 2 -->
+                    <div
+                    style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; margin-right: 20px;">
+                    <div
+                        style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-right: 20px; text-align: center; position: relative; overflow: hidden;">
+                        <div
+                            style="width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <img src="fast-delivery.png" alt="Pumpkin Seeds Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h3
+                            style="font-size: 20px; color: #4E3B2F; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                            Fast Delivery
+                        </h3>
+                        <p
+                            style="font-size: 14px; color: #555; line-height: 1.5; padding: 0 10px;">
+                            Our efficient logistics ensure that your orders reach you in the fastest time possible.
+                        </p>
+                        <div
+                            style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 6px; background: aqua; border-radius: 10px;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: aqua; border-radius: 50%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                        </div>
+                    </div>
+
+                </div>
+                    <div
+                        style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; margin-right: 20px;">
+                        <div
+                            style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-right: 20px; text-align: center; position: relative; overflow: hidden;">
+                            <div
+                                style="width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <img src="support.png" alt="Fast Delivery Icon"
+                                    style="width: 50px; height: 50px;">
+                            </div>
+                            <h3
+                                style="font-size: 20px; color: #4E3B2F; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                                Exceptional Customer Service
+                            </h3>
+                            <p
+                                style="font-size: 14px; color: #555; line-height: 1.5; padding: 0 10px;">
+                                Our team is dedicated to providing you with top-notch support and assistance.
+                            </p>
+                            <div
+                                style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 6px; background: #333; border-radius: 10px;">
+                            </div>
+                            <div
+                                style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: #333; border-radius: 50%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div
+                    style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; margin-right: 20px;">
+                    <div
+                        style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-right: 20px; text-align: center; position: relative; overflow: hidden;">
+                        <div
+                            style="width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <img src="eco-friendly-fabric.png" alt="Fast Delivery Icon"
+                                style="width: 50px; height: 50px;">
+                        </div>
+                        <h3
+                            style="font-size: 20px; color: #4E3B2F; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                            Eco-Friendly Practices
+                        </h3>
+                        <p 
+                            style="font-size: 14px; color: #555; line-height: 1.5; padding: 0 10px;">
+                            We are committed to sustainable and eco-friendly practices in all aspects of our operations.
+                        </p>
+                        <div
+                            style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 6px; background: #009688; border-radius: 10px;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: #009688; border-radius: 50%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                        </div>
+                    </div>
+
+                </div>
+                    <div
+                        style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; margin-right: 20px;">
+                        <div
+                            style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-right: 20px; text-align: center; position: relative; overflow: hidden;">
+                            <div
+                                style="width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <img src="approved.png" alt="Fast Delivery Icon"
+                                    style="width: 50px; height: 50px;">
+                            </div>
+                            <h3
+                                style="font-size: 20px; color: #4E3B2F; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                                High-Quality Standards
+                            </h3>
+                            <p 
+                                style="font-size: 14px; color: #555; line-height: 1.5; padding: 0 10px;">
+                                Every product undergoes stringent quality checks to meet the highest industry standards.
+                            </p>
+                            <div
+                                style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 6px; background: #009688; border-radius: 10px;">
+                            </div>
+                            <div
+                                style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: #009688; border-radius: 50%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div
+                        style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; margin-right: 20px;">
+                        <div
+                            style="flex: none; width: 300px; padding: 20px; background: #fff7e0; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-right: 20px; text-align: center; position: relative; overflow: hidden;">
+                            <div
+                                style="width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <img src="juggling-multiple-tasks.png" alt="Fast Delivery Icon"
+                                    style="width: 50px; height: 50px;">
+                            </div>
+                            <h3
+                                style="font-size: 20px; color: #4E3B2F; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                                Diverse Product Range
+                            </h3>
+                            <p
+                                style="font-size: 14px; color: #555; line-height: 1.5; padding: 0 10px;">
+                                Our offerings include a variety of premium seeds, nuts, berries, and dry fruits.
+                            </p>
+                            <div
+                                style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 6px; background: #ff6f61; border-radius: 10px;">
+                            </div>
+                            <div
+                                style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; background: #ff6f61; border-radius: 50%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Add more items here -->
+                </div>
+            </div>
+        </section>
+
+
+        <style>
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+
+            /* Slower animation for smaller screens */
+            @media (width <=990px) {
+                .scroll-container {
+                    animation: scroll 3s linear infinite;
+                    /* Slower speed */
+                }
+
+
+            }
+
+            @media (max-width: 480px) {
+                .scroll-container {
+                    animation: scroll 60s linear infinite;
+                    /* Even slower for very small screens */
+                }
+            }
+        </style>
+
+     
+        
+        
+        
+        
+        
+
+
+         
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+        <!--what is evertruth ends here-->
+
+        <!-- our vision -->
+        <section style="background-color: #f0f8ff; padding: 60px 20px; text-align: center;" data-scroll-section>
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="margin-bottom: 40px;">
+                    <div
+                        style="display: inline-block; border-radius: 50%; overflow: hidden; width: 120px; height: 120px; border: 5px solid #4E3B2F;">
+                        <img src="oie_7bcwMCxEkABK.jpg" alt="EverTruth Logo"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h2
+                        style="font-size: 2.5em; color: #4E3B2F; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+                        Our Vision for EverTruth</h2>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <div
+                        style="flex: 1 1 calc(33.333% - 40px); padding: 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 300px; text-align: center; position: relative;">
+                        <i class="fas fa-cogs" style="font-size: 3em; color: #ff6f61; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.5em; color: #4E3B2F;">Innovative Solutions</h3>
+                        <p style="font-size: 1em; color: #555;">Driving innovation in our
+                            products to meet the evolving needs of the industry.</p>
+                        <div
+                            style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 5px; background: #ff6f61; border-radius: 10px;">
+                        </div>
+                    </div>
+                    <div
+                        style="flex: 1 1 calc(33.333% - 40px); padding: 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 300px; text-align: center; position: relative;">
+                        <i class="fas fa-globe" style="font-size: 3em; color: #4e79a7; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.5em; color: #4E3B2F;">Global Reach</h3>
+                        <p style="font-size: 1em; color: #555;">Expanding our footprint
+                            across international markets to bring our quality products worldwide.</p>
+                        <div
+                            style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 5px; background: #4e79a7; border-radius: 10px;">
+                        </div>
+                    </div>
+                    <div
+                        style="flex: 1 1 calc(33.333% - 40px); padding: 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 300px; text-align: center; position: relative;">
+                        <i class="fas fa-leaf" style="font-size: 3em; color: #2b8a3e; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.5em; color: #4E3B2F;">Sustainable Practices</h3>
+                        <p style="font-size: 1em; color: #555;">Committed to sustainability
+                            and eco-friendly practices throughout our supply chain.</p>
+                        <div
+                            style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 5px; background: #2b8a3e; border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- FAQs Section -->
+        <section style="padding: 50px 20px; background-color: #EDEDED; margin: 50px 0; border-radius: 10px;"
+            data-scroll-section>
+            <h2 
+                style="font-size: 2.5em; text-align: center; margin-bottom: 40px; font-family: 'Montserrat', sans-serif; color: #4E3B2F;">
+                Frequently Asked Questions</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-family: 'Arial', sans-serif;">
+                <div style="margin-bottom: 30px; padding-left: 50px; position: relative;">
+                    <i class="fas fa-box-open"
+                        style="position: absolute; left: 0; top: 5px; font-size: 2em; color: #FF5733; animation: icon-bounce 1s infinite;"></i>
+                    <h3 
+                        style="font-size: 1.7em; color: #FF5733; transition: color 0.3s ease;">What products do you
+                        offer?</h3>
+                    <p  style="font-size: 1.1em; color: #333;">We offer a wide range of seeds,
+                        nuts, and dry fruits, all sourced from the finest farms and suppliers.</p>
+                </div>
+                <div style="margin-bottom: 30px; padding-left: 50px; position: relative;">
+                    <i class="fas fa-globe"
+                        style="position: absolute; left: 0; top: 5px; font-size: 2em; color: #3498DB; animation: icon-bounce 1s infinite;"></i>
+                    <h3
+                        style="font-size: 1.7em; color: #3498DB; transition: color 0.3s ease;">Do you provide
+                        international shipping?</h3>
+                    <p style="font-size: 1.1em; color: #333;">Yes, we ship our products
+                        internationally. Please contact us for specific details and shipping rates.</p>
+                </div>
+                <div style="margin-bottom: 30px; padding-left: 50px; position: relative;">
+                    <i class="fas fa-truck"
+                        style="position: absolute; left: 0; top: 5px; font-size: 2em; color: #2ECC71; animation: icon-bounce 1s infinite;"></i>
+                    <h3 
+                        style="font-size: 1.7em; color: #2ECC71; transition: color 0.3s ease;">Can I place a bulk order?
+                    </h3>
+                    <p style="font-size: 1.1em; color: #333;">Absolutely! We specialize in
+                        B2B orders and offer competitive pricing for bulk purchases.</p>
+                </div>
+            </div>
+            <script>
+                // JS effect: Icon bounce animation
+                document.querySelectorAll('h3').forEach(header => {
+                    header.addEventListener('mouseover', () => {
+                        header.style.color = '#D35400';
+                    });
+                    header.addEventListener('mouseout', () => {
+                        header.style.color = '';
+                    });
+                });
+            </script>
+        </section>
+        <style>
+            @keyframes icon-bounce {
+
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                40% {
+                    transform: translateY(-10px);
+                }
+
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+        </style>
+
+
+        <!--testimonial-->
+        <section style="background-color: #fff8f0; padding: 60px 20px; text-align: center; position: relative;"
+            data-scroll-section>
+            <h2
+                style="font-size: 2.8em; color: #4e3b2f; margin-bottom: 40px; font-family: 'Poppins', sans-serif; font-weight: 700;">
+                What Our Clients Say</h2>
+            <div style="position: relative; overflow: hidden;">
+                <div style="display: flex; flex-wrap: nowrap; animation: scroll 10s linear infinite;">
+                    <div
+                        style="flex: none; width: 300px; margin: 0 15px; background: #ffebcc; padding: 20px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Star"
+                                style="width: 50px; height: 50px;">
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Client 1"
+                            style="width: 80px; height: 80px; border-radius: 50%; border: 5px solid #ffb74d; margin-bottom: 15px;">
+                        <h3 style="font-size: 1.5em; color: #4e3b2f;">Ajit Agarwal</h3>
+                        <p style="font-size: 1em; color: #555;">"EverTruth's products are
+                            top-notch, and their service is exceptional. Highly recommend!"</p>
+                    </div>
+                    <div
+                        style="flex: none; width: 300px; margin: 0 15px; background: #ffebcc; padding: 20px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Star"
+                                style="width: 50px; height: 50px;">
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/69.jpg" alt="Client 1"
+                            style="width: 80px; height: 80px; border-radius: 50%; border: 5px solid #ffb74d; margin-bottom: 15px;">
+                        <h3 style="font-size: 1.5em; color: #4e3b2f;">Amit Sharma</h3>
+                        <p style="font-size: 1em; color: #555;">"EverTruth's products are
+                            top-notch, and their service is exceptional. Highly recommend!"</p>
+                    </div>
+                    <div
+                        style="flex: none; width: 300px; margin: 0 15px; background: #ffebcc; padding: 20px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Star"
+                                style="width: 50px; height: 50px;">
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Client 1"
+                            style="width: 80px; height: 80px; border-radius: 50%; border: 5px solid #ffb74d; margin-bottom: 15px;">
+                        <h3 style="font-size: 1.5em; color: #4e3b2f;">Anubhav Pandey</h3>
+                        <p style="font-size: 1em; color: #555;">"EverTruth's products are
+                            top-notch, and their service is exceptional. Highly recommend!"</p>
+                    </div>
+                    <div
+                        style="flex: none; width: 300px; margin: 0 15px; background: #ffebcc; padding: 20px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Star"
+                                style="width: 50px; height: 50px;">
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Client 3"
+                            style="width: 80px; height: 80px; border-radius: 50%; border: 5px solid #ffb74d; margin-bottom: 15px;">
+                        <h3 style="font-size: 1.5em; color: #4e3b2f;">Ravi Kumar</h3>
+                        <p style="font-size: 1em; color: #555;">"A reliable and trustworthy
+                            company. Their attention to detail is unmatched."</p>
+                    </div>
+                </div>
+                <div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%);">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="font-size: 2em; color: #ffb74d;">&#10094;</span>
+                        <span style="font-size: 2em; color: #ffb74d;">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--testimonial ends here-->
+
+
+
+
+        <!-- Slider Section -->
+        <section class="slider"
+            style="position: relative; width: 100%; height: 40vh; overflow: hidden; margin-bottom: 25px;"
+            data-scroll-section>
+            <div class="slides" style="display: flex; transition: transform 0.8s ease-in-out; height: 100%;">
+                <div class="slide" style="min-width: 100%; position: relative;">
+                    <img src="images/photo_2024-08-16_01-17-59.jpg" alt="Premium Slide 1"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="slide-content" style="position: absolute; bottom: 0%; left: 5%; color: white;">
+                        <h2 style="font-size: 3em; margin: 0; font-family: 'Montserrat', sans-serif;">Quality Seeds</h2>
+                        <p style="font-size: 1.5em;">The best seeds for the best yield.</p>
+                    </div>
+                </div>
+                <div class="slide" style="min-width: 100%; position: relative;">
+                    <img src="images/photo_2024-08-16_01-17-53.jpg" alt="Premium Slide 2"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="slide-content" style="position: absolute; bottom: 20%; left: 5%; color: white;">
+                        <h2 style="font-size: 3em; margin: 0; font-family: 'Montserrat', sans-serif;">Organic Nuts</h2>
+                        <p style="font-size: 1.5em;">Healthy and nutritious nuts for a better life.</p>
+                    </div>
+                </div>
+                <div class="slide" style="min-width: 100%; position: relative;">
+                    <img src="images/photo_2024-08-16_01-18-11.jpg" alt="Premium Slide 3"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="slide-content" style="position: absolute; bottom: 20%; left: 5%; color: white;">
+                        <h2 style="font-size: 3em; margin: 0; font-family: 'Montserrat', sans-serif;"></h2>
+                        <p style="font-size: 1.5em;">The best dry fruits for the best yield.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation dots -->
+            <div class="dots"
+                style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px;">
+                <span class="dot active"
+                    style="height: 15px; width: 15px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; cursor: pointer;"
+                    onclick="currentSlide(1)"></span>
+                <span class="dot"
+                    style="height: 15px; width: 15px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; cursor: pointer;"
+                    onclick="currentSlide(2)"></span>
+                <span class="dot"
+                    style="height: 15px; width: 15px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; cursor: pointer;"
+                    onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <style>
+            /* Responsive Slider Styles */
+            @media (max-width: 768px) {
+                .slider {
+                    height: 35vh;
+                    /* Reduce height for smaller screens */
+                }
+
+                .slide-content h2 {
+                    font-size: 2em;
+                    /* Smaller font size for mobile */
+                }
+
+                .slide-content p {
+                    font-size: 1em;
+                    /* Smaller font size for mobile */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .slider {
+                    height: 35vh;
+                    /* Further reduce height for mobile */
+                }
+
+                .slide-content h2 {
+                    font-size: 1.8em;
+                    /* Even smaller font size */
+                }
+
+                .slide-content p {
+                    font-size: 0.9em;
+                    /* Adjust paragraph font size */
+                }
+
+                .dots {
+                    bottom: 10px;
+                    /* Adjust position of dots */
+                }
+            }
+        </style>
+
+
+
+
+        <!-- Footer -->
+        <footer
+            style="background-color: #4e3b2f; color: #fff; padding: 40px 20px; text-align: center; font-family: 'Montserrat', sans-serif;">
+            <div
+                style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
+
+                <!-- Company Info -->
+                <div style="flex: 1 1 300px; margin: 0 20px;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Evertruth</h3>
+                    <p style="font-size: 16px; margin-bottom: 20px;">Your go-to B2B supplier
+                        for premium seeds, nuts, and dry fruits. Quality and reliability in every deal.</p>
+                    <div style="display: flex; justify-content: center; gap: 10px;">
+                        <a href="https://www.facebook.com/evertruth" style="color: #fff;" aria-label="Facebook"><img
+                                src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"
+                                style="width: 24px; height: 24px;"></a>
+                        <a href="mailto:sales@evertruth.in" style="color: #fff;" aria-label="Email"><img
+                                src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"
+                                style="width: 24px; height: 24px;"></a>
+                        <a href="https://www.linkedin.com/company/evertruth/" style="color: #fff;"
+                            aria-label="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png"
+                                alt="LinkedIn" style="width: 24px; height: 24px;"></a>
+                        <a href="https://www.instagram.com/evertruth/" style="color: #fff;" aria-label="Instagram"><img
+                                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                                style="width: 24px; height: 24px;"></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div style="flex: 1 1 300px; margin: 0 20px;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0; font-size: 16px;">
+                        <li><a href="#"
+                                style="color: #fff; text-decoration: none; margin-bottom: 10px; display: block;">Home</a>
+                        </li>
+                        <li><a href="#"
+                                style="color: #fff; text-decoration: none; margin-bottom: 10px; display: block;">Products</a>
+                        </li>
+                        <li><a href="#"
+                                style="color: #fff; text-decoration: none; margin-bottom: 10px; display: block;">About
+                                Us</a></li>
+                        <li><a href="mailto:sales@evertruth.in"
+                                style="color: #fff; text-decoration: none; margin-bottom: 10px; display: block;">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                style="color: #fff; text-decoration: none; margin-bottom: 10px; display: block;">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div style="flex: 1 1 300px; margin: 0 20px;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Contact Us</h3>
+                    <p style="font-size: 16px; margin-bottom: 10px;">Email: <a href="mailto:sales@evertruth.in"
+                            style="color: #ffeb3b;">sales@evertruth.in</a></p>
+                    <p style="font-size: 16px;">Address: Noida, Uttar Pradesh, India</p>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 40px; font-size: 14px;">
+                <p>&copy; 2024 Evertruth. All rights reserved. | <a href="#"
+                        style="color: #ffeb3b; text-decoration: none;">Privacy Policy</a> | <a href="#"
+                        style="color: #ffeb3b; text-decoration: none;">Terms of Service</a></p>
+            </div>
+        </footer>
+
+
+        <!-- WhatsApp Floating Button -->
+       <!-- WhatsApp Button -->
+       <a href="https://wa.me/+917455830605" target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp">
+    </a>
+    
+
+    </div>
+
+    <!-- Include the necessary scripts -->
+    <script src="script.js"></script>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Locomotive Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+</body>
+
+</html>

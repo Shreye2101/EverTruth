@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Berries - Evertruth Foods</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; margin: 0; padding: 0; box-sizing: border-box;">
+
+    <!-- Header Section -->
+
+    <header class="header">
+        <div class="back-button">
+            <button>
+                <a href="index.html" class="back-link">
+                    <i class="fa-solid fa-circle-chevron-left" ></i>
+                </a>
+            </button>
+        </div>
+        <div class="company-name">EverTruth</div>
+            <div class="menu">
+                <button id="menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+        
+        <!-- Overlay Menu -->
+        <div id="overlay-menu" class="overlay">
+            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+            <div class="overlay-content inconsolata-custom">
+                <a href="index.html">HOME</a>
+                <a href="nuts.html">SEEDS</a>
+                <a href="seeds.html">BERRIES</a>
+                <a href="dry-fruits.html">DRY FRUITS</a>
+                <a href="https://wa.me/+917455830605" target="_blank">CONTACT US</a>
+            </div>
+        </div>
+
+
+    <style>
+
+.permanent-marker-regular {
+            font-family: "Permanent Marker", cursive;
+            font-weight: 2000;
+            font-style: normal;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #D3B8A1, #EADAC2);
+    color: #5C4033; /* Dark brown color */
+    padding: 10px 20px;
+    border-bottom: 2px solid #5C4033;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+.header .back-button button {
+    background: none;
+    border: none;
+    color: #5C4033; /* Dark brown color for the icon */
+    font-size: 24px; /* Icon size */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.header .back-button .back-link {
+    text-decoration: none;
+    color: #5C4033; /* Dark brown color */
+    display: flex;
+    align-items: center;
+    font-size: 33px;
+}
+
+.header .company-name {
+    font-size: 28px; /* Clean, medium size */
+    font-weight: 700; /* Semi-bold for readability */
+    font-family: 'Arial', sans-serif; /* Simple, modern font */
+    color: #333333; /* Dark, neutral tone */
+    letter-spacing: 0.5px; /* Minimal letter spacing */
+    line-height: 1.4; /* Comfortable line spacing */
+    /*text-transform: uppercase; /* All caps for consistency */
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-align: left; /* Aligns to the left for simplicity */
+}
+
+
+.header .menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .menu button {
+    background-color: #5C4033; /* Dark brown color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    color: #5C4033; /* Dark brown color */
+    border: 1px solid #5C4033;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 10;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.header .menu .dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #5C4033; /* Dark brown color */
+    border-bottom: 1px solid #5C4033;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.header .menu .dropdown a:last-child {
+    border-bottom: none;
+}
+
+.header .menu .dropdown a:hover {
+    background-color: #5C4033; /* Dark brown color */
+    color: white;
+}
+
+.header .menu button:hover + .dropdown,
+.header .menu .dropdown:hover {
+    display: block;
+}
+
+.header .contact-us {
+    font-size: 16px;
+}
+
+.header .contact-us a {
+    color: #5C4033; /* Dark brown color */
+    text-decoration: none;
+    border: 1px solid #5C4033;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .contact-us a:hover {
+    background-color: #5C4033; /* Dark brown color */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .header .logo {
+        margin-right: 10px;
+    }
+
+    .header .company-name {
+        font-size: 34px; /* Adjust font size for smaller screens */
+        margin: 0;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    }
+
+    .header .menu {
+        display: flex;
+        flex-direction: row; /* Arrange menu items in a row */
+        align-items: center;
+    }
+
+    .header .menu button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .header .menu .dropdown {
+        width: auto; /* Adjust width to fit content */
+        font-size: small;
+        right: 0; /* Align dropdown to the right */
+    }
+
+    .header .menu .dropdown a {
+        padding: 10px;
+    }
+}
+
+
+.overlay {
+    height: 100%; /* Full-screen */
+    width: 0%; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* Transition effect */
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Style for the overlay content */
+.overlay-content {
+    position: relative;
+    top: 25%; /* Center vertically */
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-content a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1; /* Hover effect */
+}
+
+/* Close button on the overlay */
+.close-btn {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    font-size: 60px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #f1f1f1; /* Hover effect */
+}
+
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* WhatsApp green color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it stays on top of other content */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        bottom: 30px;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    .whatsapp-button img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        bottom: 60px;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    .whatsapp-button img {
+        width: 45px;
+        height: 45px;
+    }
+}
+    </style>
+
+
+
+
+    <header style="background: linear-gradient(135deg, #8BC34A, #4CAF50); color: white; padding: 20px 0; text-align: center;">
+        <h1 style="font-size: 2.8rem; margin: 0; font-family: 'Montserrat', sans-serif;">Premium Quality Berries</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 60px 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); margin: 20px;">
+        <img src="Designer (3).jpeg" alt="Berries" style="max-width: 100%; height: 40vh; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease; cursor: pointer;" onclick="window.location.href='product-details.html';">
+        <div style="margin-top: 20px;">
+            <h2 style="font-size: 2.2rem; color: #4CAF50; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Discover Our Exquisite Berries Collection</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">We provide a wide range of premium berries, carefully selected for their flavor and nutritional benefits, ensuring the highest quality.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Our Categories:</strong></p>
+            <ul style="list-style: disc; margin-left: auto; margin-right: auto; max-width: 600px; text-align: left; font-size: 1rem; margin-bottom: 20px;">
+                <li>Blueberries, Cranberries</li>
+                <li>Goji Berries, Acai Berries</li>
+                <li>Blackberries, Raspberries, and more</li>
+            </ul>
+            <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Pricing:</strong> Competitive rates with bulk order discounts available.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;"><strong>Quality:</strong> We ensure premium quality through stringent selection and testing processes.</p>
+            <a href="Product catalogue _ Rate _ Quality Specs (1).xlsx.pdf" download style="display: inline-block; padding: 12px 25px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1rem; transition: background-color 0.3s ease, transform 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#388E3C';" onmouseout="this.style.backgroundColor='#4CAF50';" onclick="this.style.transform='scale(1.05)'; setTimeout(() => this.style.transform='scale(1)', 300);">Download Product Catalog</a>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 15px 20px; margin-top: 30px;">
+        <p style="margin: 0; font-size: 1rem;">&copy; 2024 Evertruth Foods Pvt Ltd. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/+917455830605" target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp">
+    </a>
+
+
+    <script>
+        // Open the overlay menu
+        document.getElementById('menu-btn').addEventListener('click', function() {
+document.getElementById('overlay-menu').style.width = '100%';
+document.body.classList.add('no-scroll'); // Disable scrolling
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+document.getElementById('overlay-menu').style.width = '0%';
+document.body.classList.remove('no-scroll'); // Enable scrolling
+});
+    </script>
+
+</body>
+</html>
